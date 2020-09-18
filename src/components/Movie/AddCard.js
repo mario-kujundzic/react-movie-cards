@@ -72,7 +72,7 @@ function AddCard({addMovie}) {
             description: description,
             year: 2000,
             imageUrl: imageUrl,
-            rating: 0,
+            rating: [],
             deletable: true
         }
         setNextId((+nextId + 100).toString());

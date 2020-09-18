@@ -17,7 +17,7 @@ export default class Movies extends Component {
   addMovie = (movie) => {
     this.setState({
       movies: [...this.state.movies, movie]
-    })
+    });
   }
 
   deleteMovie = (id) => {
@@ -28,7 +28,19 @@ export default class Movies extends Component {
     }, [])
     this.setState({
       movies: newMovies
-    })
+    });
+  }
+
+  addRating = (id, rating) => {
+    const newMovies = this.state.movies.map(el => {
+      if (el.id === id) {
+        el.rating.push(rating);
+      }
+      return el;
+    });
+    this.setState({
+      movies: newMovies
+    });
   }
 
   render() {
@@ -36,7 +48,7 @@ export default class Movies extends Component {
       <div className="container-fluid" style={{ marginLeft: '-15px' }}>
         <div className="d-flex flex-row">
           <div className="col-sm-12">
-            <MovieList movies={this.state.movies} addMovie={this.addMovie} deleteMovie={this.deleteMovie} />
+            <MovieList movies={this.state.movies} addMovie={this.addMovie} deleteMovie={this.deleteMovie} addRating={this.addRating} />
           </div>
         </div>
       </div>
