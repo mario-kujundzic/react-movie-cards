@@ -14,12 +14,18 @@ export default class Movies extends Component {
     }));
   }
 
+  addMovie = (movie) => {
+    this.setState({
+      movies: [...this.state.movies, movie]
+    })
+  }
+
   render() {
     return (
       <div className="container-fluid" style={{ marginLeft: '-15px' }}>
         <div className="d-flex flex-row">
           <div className="col-sm-12">
-            <MovieList movies={this.state.movies} />
+            <MovieList movies={this.state.movies} addMovie={this.addMovie} />
           </div>
         </div>
       </div>
