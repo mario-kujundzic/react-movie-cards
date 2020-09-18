@@ -10,7 +10,9 @@ const MovieCard = ({ movie, deleteMovie, addRating }) => {
   return  (
       <div className="movie-card">
         <div className="movie-card card">
-          <img className="card-img-top" src={movie.imageUrl} alt="" />
+          <div className="image-crop">
+            <img className="card-img-top" src={movie.imageUrl} alt="" />
+          </div>
           <div className="card-body">
             <h4 className="card-title">{movie.title}</h4>
             <h6 className="card-subtitle mb-2 text-muted">{movie.subtitle}</h6>

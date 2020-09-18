@@ -1,29 +1,29 @@
 .add-url {
     width: 100%;
-    height: 170px;
+    height: 100px;
 }
 
 .add-title {
-
+    width: 100%;
+    max-width: 100%;
 }
 
 .add-subtitle {
-
+    width: 100%;
+    max-width: 100%;
 }
 
 .add-description {
-
+    width: 100%;
+    max-width: 100%;
 }
 
 .error {
     color: red;
+    margin-bottom: 0;
 }
 
 .add-button {
     width: 100%;
     height: 100%;
-}
-
-.button-delete {
-    
 }

@@ -16,6 +16,15 @@
     border-bottom: 1px dotted black;
 }
 
+/* Additional css for images */
+
+.image-crop {
+    max-width: 298;
+    max-height: 168;
+    overflow: hidden;
+}
+
+
 /* Borrowed from W3 schools */
 
 /* Tooltip text */
